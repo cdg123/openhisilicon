@@ -1,0 +1,12 @@
+MOD_NAME := spi_ms41959
+OUT := $(PREFIX)$(MOD_NAME)
+
+DIR=$(MOD_NAME)
+
+SRCS := $(DIR)/spi_ms41959.c
+
+OBJS := $(SRCS:%.c=%.o) $(ASM_SRCS:%.S=%.o)
+
+$(OUT)-objs := $(OBJS)
+
+obj-m += $(OUT).o
