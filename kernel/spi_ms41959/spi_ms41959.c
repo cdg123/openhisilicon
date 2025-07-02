@@ -12,7 +12,7 @@ MODULE_DESCRIPTION("SPI Driver for MS41959 motor controller spi module");
 MODULE_VERSION("1.0");
 
 static int __init spi_ms41959_init(void){
-    printk(KERN INFO "SPI kernel module loaded ok\n");
+    printk(KERN_INFO "SPI kernel module loaded ok\n");
 }
 
 static void __exit spi_ms41959_exit(void){
