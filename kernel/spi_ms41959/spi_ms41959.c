@@ -13,6 +13,8 @@ MODULE_VERSION("1.0");
 
 static int __init spi_ms41959_init(void){
     printk(KERN_INFO "SPI kernel module loaded ok\n");
+    // do loading stuf here to register the spi device, etc.
+    return 0; // Return 0 on success
 }
 
 static void __exit spi_ms41959_exit(void){
