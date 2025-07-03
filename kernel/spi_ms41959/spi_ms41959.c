@@ -21,6 +21,7 @@ static int __init spi_ms41959_init(void){
 
 static void __exit spi_ms41959_exit(void){
     printk(KERN_INFO, "Module unloaded ok\n");
+
 }
 
 module_init(spi_ms41959_init);
