@@ -9,10 +9,12 @@
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Chris Gambell");
 MODULE_DESCRIPTION("SPI Driver for MS41959 motor controller spi module");
-MODULE_VERSION("1.0");
+MODULE_VERSION("0.1");
 
 static int __init spi_ms41959_init(void){
     printk(KERN_INFO "SPI kernel module loaded ok\n");
+
+    
     // do loading stuf here to register the spi device, etc.
     return 0; // Return 0 on success
 }
