@@ -33,7 +33,7 @@ static struct spi_board_info my_spi_device = {
 
 static int __init spi_ms41959_init(void){
     printk(KERN_INFO "SPI kernel module loaded ok\n");
-    printk(KERN_IFO "Attempting to register spi controller on bus")
+    printk(KERN_INFO "Attempting to register spi controller on bus")
 
     // Get a pointer to the SPI master bus
     master = spi_busnum_to_master(my_spi_device.bus_num);
@@ -45,7 +45,11 @@ static int __init spi_ms41959_init(void){
 
     //Find the SPI device by name as defined in the device tree
     dev = bus_find_device_by_name(&spi_bus_type, NULL, spi_name);
-
+    if (!dev) {
+        printk(KERN_ERR "Failed to find SPI device %s\n", spi_name);
+        return -ENODEV; // Return error if device not found
+    }
+    printk(KERN_INFO "SPI device %s found\n", spi_name);
 
 
     // do loading stuf here to register the spi device, etc.
