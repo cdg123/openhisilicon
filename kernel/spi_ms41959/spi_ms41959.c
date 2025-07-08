@@ -16,14 +16,13 @@ MODULE_VERSION("0.1");
 
 struct spi_master *master;
 struct spi_device *spi_dev;
-#DEFINE SPI_NAME "SPI1@120710000   "
 
-static char spi_name[128] = SPI_NAME; // Name of the SPI device as defined in the device tree
+static char spi_name[128] ="SPI1@120710000"; // Name of the SPI device as defined in the device tree
 static struct device *dev; // Pointer to the SPI device
 
 static struct spi_board_info my_spi_device = {
     .modalias = "SPI1",
-    .max_speed_hz = 10000000; // 10 MHz
+    .max_speed_hz = 10000000, // 10 MHz
     .bus_num = 1, // SPI bus number
     .chip_select = 0, // Chip select line;
     .mode = SPI_MODE_3, // SPI mode;
