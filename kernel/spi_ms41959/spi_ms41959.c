@@ -32,7 +32,7 @@ static struct spi_board_info my_spi_device = {
 
 static int __init spi_ms41959_init(void){
     printk(KERN_INFO "SPI kernel module loaded ok\n");
-    printk(KERN_INFO "Attempting to register spi controller on bus")
+    printk(KERN_INFO "Attempting to register spi controller on bus");
 
     // Get a pointer to the SPI master bus
     master = spi_busnum_to_master(my_spi_device.bus_num);
