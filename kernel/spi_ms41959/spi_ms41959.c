@@ -21,12 +21,11 @@ static char spi_name[128] ="SPI1@120710000"; // Name of the SPI device as define
 static struct device *dev; // Pointer to the SPI device
 
 static struct spi_board_info my_spi_device = {
-    .modalias = "SPI1",
+    .modalias = "spi1",
     .max_speed_hz = 10000000, // 10 MHz
     .bus_num = 1, // SPI bus number
     .chip_select = 0, // Chip select line;
     .mode = SPI_MODE_3, // SPI mode;
-    .bits_per_word = 8, // 8 bits per word
 };
 
 
