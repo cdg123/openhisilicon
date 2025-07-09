@@ -17,7 +17,8 @@ MODULE_VERSION("0.1");
 struct spi_master *master;
 struct spi_device *spi_dev;
 
-static char spi_name[128] ="SPI1@120710000"; // Name of the SPI device as defined in the device tree
+// static char spi_name[128] ="SPI1@120710000"; // Name of the SPI device as defined in the device tree
+static car spi_name[128] = "spi1.0"; // Not sure what I need here but think this is it as in device tree.
 static struct device *dev; // Pointer to the SPI device
 
 static struct spi_board_info my_spi_device = {
